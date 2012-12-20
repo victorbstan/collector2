@@ -1,39 +1,39 @@
 CASE_VOLUME = 4
 
 items = [
-	{ name: "A", value: 1, volume: 1 },
-	{ name: "B", value: 2, volume: 1 },
-	{ name: "C", value: 3, volume: 2 },
-	{ name: "D", value: 1, volume: 2 },
-	{ name: "E", value: 2, volume: 3 }
+  { name: "A", value: 1, volume: 1 },
+  { name: "B", value: 2, volume: 1 },
+  { name: "C", value: 3, volume: 2 },
+  { name: "D", value: 1, volume: 2 },
+  { name: "E", value: 2, volume: 3 }
 ]
 
 @collection = []
 
 def merge2items(item1, item2)
-	if item1 && item2
-		{
-			name: (item1[:name] + item2[:name]),
-			value: (item1[:value] + item2[:value]),
-			volume: (item1[:volume] + item2[:volume])
-		}
-	end
+  if item1 && item2
+    {
+      name: (item1[:name] + item2[:name]),
+      value: (item1[:value] + item2[:value]),
+      volume: (item1[:volume] + item2[:volume])
+    }
+  end
 end
 
 def integrate(items)
-	# take the first item and itterativley integrate the next item
-	memo = nil
-	result = []
-	items.each do |i|
-		memo = merge2items(memo, i) || i
-		result << memo
-	end
-	result
+  # take the first item and itterativley integrate the next item
+  memo = nil
+  result = []
+  items.each do |i|
+    memo = merge2items(memo, i) || i
+    result << memo
+  end
+  result
 end
 
 def process_items(items_list)
-	@collection.concat integrate(items_list)
-	process_items(items_list.drop(1)) unless items_list.size == 1
+  @collection.concat integrate(items_list)
+  process_items(items_list.drop(1)) unless items_list.size == 1
 end
 
 process_items(items) # perform calculation
