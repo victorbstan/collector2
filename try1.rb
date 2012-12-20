@@ -21,7 +21,8 @@ def merge2items(item1, item2)
 end
 
 def integrate(items)
-  # take the first item and itterativley integrate the next item
+  # take the first item and iteratively integrate the next items,
+  # collect results in an array
   memo = nil
   result = []
   items.each do |i|
@@ -36,7 +37,7 @@ def process_items(items_list)
   process_items(items_list.drop(1)) unless items_list.size == 1
 end
 
-process_items(items) # perform calculation
+process_items(items) # start
 
 # create list of items that fit in the max specified volume, sort by volume
 volume_restricted_items = @collection.take_while {|i| i[:volume] <= CASE_VOLUME}
