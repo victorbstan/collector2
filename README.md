@@ -13,7 +13,7 @@ The Quai Branly has asked Olaus to send some items for display in their Oceania 
 
 As a hint, this is isomorphic to the knapsack problem. We’ll be looking at a variety of different ways of solving this, with a focus on dynamic programming. Feel free to read ahead!
 
-## Solution
+## Solution (INCOMPLETE!)
 
 For the the case and data-set:
 
