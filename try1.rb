@@ -32,8 +32,22 @@ def integrate(items)
   result
 end
 
+def pair_other(items)
+  # take the first item in the list and merge it with every item,
+  # except the first one after it
+  i = 0
+  first_item = items.first
+  result = []
+  items.each do |item|
+    result << merge2items(first_item, item) if i > 1
+    i += 1
+  end
+  result
+end
+
 def process_items(items_list)
   @collection.concat integrate(items_list)
+  @collection.concat pair_other(items_list)
   process_items(items_list.drop(1)) unless items_list.size == 1
 end
 

@@ -13,7 +13,7 @@ The Quai Branly has asked Olaus to send some items for display in their Oceania 
 
 As a hint, this is isomorphic to the knapsack problem. We’ll be looking at a variety of different ways of solving this, with a focus on dynamic programming. Feel free to read ahead!
 
-## Solution (INCOMPLETE!)
+## Solution
 
 For the the case and data-set:
 
@@ -43,13 +43,19 @@ It outputs the results:
 	{:name=>"ABC", :value=>6, :volume=>4}
 	{:name=>"ABCD", :value=>7, :volume=>6}
 	{:name=>"ABCDE", :value=>9, :volume=>9}
+	{:name=>"AC", :value=>4, :volume=>3}
+	{:name=>"AD", :value=>2, :volume=>3}
+	{:name=>"AE", :value=>3, :volume=>4}
 	{:name=>"B", :value=>2, :volume=>1}
 	{:name=>"BC", :value=>5, :volume=>3}
 	{:name=>"BCD", :value=>6, :volume=>5}
 	{:name=>"BCDE", :value=>8, :volume=>8}
+	{:name=>"BD", :value=>3, :volume=>3}
+	{:name=>"BE", :value=>4, :volume=>4}
 	{:name=>"C", :value=>3, :volume=>2}
 	{:name=>"CD", :value=>4, :volume=>4}
 	{:name=>"CDE", :value=>6, :volume=>7}
+	{:name=>"CE", :value=>5, :volume=>5}
 	{:name=>"D", :value=>1, :volume=>2}
 	{:name=>"DE", :value=>3, :volume=>5}
 	{:name=>"E", :value=>2, :volume=>3}
